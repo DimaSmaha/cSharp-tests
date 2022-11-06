@@ -14,7 +14,7 @@ namespace pageObjects
 
         public IWebElement backpackId => driver.FindElement(By.Id("item_4_title_link"));
 
-        public void clickOnBackback()
+        public void clickOnBackpack()
         {
             this.backpackId.Click();
         }

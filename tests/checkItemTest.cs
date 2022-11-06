@@ -9,7 +9,7 @@ namespace tests
     public class checkItemTest:commonTest
     {
         [Test]
-        public void LoginTest()
+        public void CheckItemTest()
         {
             homePage home = new homePage(driver);
             home.fillLoginInput("standard_user");
@@ -19,7 +19,7 @@ namespace tests
             Assert.AreEqual(url, "https://www.saucedemo.com/inventory.html");
 
             inventoryPage inventory = new inventoryPage(driver);
-            inventory.clickOnBackback();
+            inventory.clickOnBackpack();
             string url1 = inventory.stringUrl();
             Assert.AreEqual(url1, "https://www.saucedemo.com/inventory-item.html?id=4");
         }

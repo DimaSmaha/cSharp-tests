@@ -7,14 +7,16 @@ namespace tests
 {
     public class commonTest
     {
-        protected IWebDriver driver;
         // protected to get access only from children classes
+        protected IWebDriver driver;
+
+        protected string baseUrl = "https://www.saucedemo.com/";
 
         [SetUp]
         public void setUp()
         {
             driver = new ChromeDriver();
-            driver.Navigate().GoToUrl("https://www.saucedemo.com/");
+            driver.Navigate().GoToUrl(baseUrl);
         }
 
         [TearDown]
