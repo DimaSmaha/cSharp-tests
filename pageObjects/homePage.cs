@@ -30,7 +30,7 @@ namespace pageObjects
         }
         public void clickElement(By element)
         {
-          driver.FindElement(element).Click();
+            driver.FindElement(element).Click();
         }
 
         public void fillElement(By element, String keys)
@@ -38,9 +38,5 @@ namespace pageObjects
             driver.FindElement(element).SendKeys(keys);
         }
 
-        public string stringUrl()
-        {
-            return driver.Url.ToString();
-        }
     }
 }

@@ -12,5 +12,10 @@ namespace pageObjects
         {
             driver = webDriver;
         }
+
+        public string stringUrl()
+        {
+            return driver.Url.ToString();
+        }
     }
 }
