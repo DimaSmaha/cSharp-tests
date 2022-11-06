@@ -13,10 +13,16 @@ namespace pageObjects
         }
 
         public IWebElement backpackId => driver.FindElement(By.Id("item_4_title_link"));
+        public IWebElement backpackTitle => driver.FindElement(By.CssSelector("[class=\"inventory_details_name large_size\"]"));
 
         public void clickOnBackpack()
         {
             this.backpackId.Click();
+        }
+
+        public string getBackpackTitleText()
+        {
+            return backpackTitle.Text;
         }
     }
 }

@@ -22,6 +22,7 @@ namespace tests
             inventory.clickOnBackpack();
             string url1 = inventory.stringUrl();
             Assert.AreEqual(url1, "https://www.saucedemo.com/inventory-item.html?id=4");
+            Assert.AreEqual(inventory.getBackpackTitleText(), "Sauce Labs Backpack");
         }
     }
 }
